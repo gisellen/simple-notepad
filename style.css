@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway:200|Roboto&display=swap');
+
+#box{
+    border: 1px solid darkgrey;
+    margin: 0 auto;
+    border-radius: 15px;
+    width: 200px;
+    height: 350px;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    animation: MoveLoad 2s;
+}
+
+#box p{
+    font-family: 'josefin-sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 0;
+    color: #666666;
+}
+
+#header{
+    background: #e6e6e6;
+    padding: 8px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    animation: MoveLoad 5s;
+}
+
+#textarea{
+    overflow: auto;
+    text-align: justify;
+    padding-top: 10px;
+    height: 250px;
+    width: 180px;
+    position: relative;
+    margin: 0 auto;
+    font-family: 'roboto', sans-serif;
+    font-size: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 1px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #4d4d4d;
+}
+
+#submit{
+    border: none;
+    position: relative;
+    border-bottom: 1px solid #4d4d4d;
+    top: 0px;
+    width: 180px;
+    font-family: 'roboto', sans-serif;
+    font-size: 10px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+@keyframes MoveLoad{
+    from {top: 0px; opacity: 0%;}
+    to {top:200px; opacity: 100%;}
+}
