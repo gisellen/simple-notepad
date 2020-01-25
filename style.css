@@ -30,7 +30,8 @@
 
 #textarea{
     overflow: auto;
-    text-align: justify;
+    overflow-x: hidden;
+    text-align: left;
     padding-top: 10px;
     height: 250px;
     width: 180px;
@@ -38,6 +39,8 @@
     margin: 0 auto;
     font-family: 'roboto', sans-serif;
     font-size: 10px;
+    word-wrap: break-word;
+    display: block;
 }
 
 ::-webkit-scrollbar{
