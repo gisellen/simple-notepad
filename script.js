@@ -2,9 +2,14 @@
 document.getElementById('submit').onkeypress = function(e){
     if (e.keyCode == '13'){
         EntryString = document.getElementById('submit').value
+        if (EntryString == ""){ // if text is empty, do not send
+            alert("please enter a text")
+        }
+        else{
         output(EntryString)
         autoScroll()
-        event.currentTarget.value = "" //clears the input text
+        event.currentTarget.value = null //clears the input text
+        }
     }
 }
 
@@ -29,6 +34,7 @@ function output(EntryString){
 
     //add elements into html
     Element.appendChild(NewEntry)
+    Element.appendChild(lineBreak)
     NewEntry.appendChild(UserInput)
 }
 
