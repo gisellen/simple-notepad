@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>my notepad</title>
-<meta name="description" content="Roughly 155 characters">
-<link rel = "stylesheet" type = "text/css" href = "style.css">
+    <title>my notepad</title>
+    <meta name="description" content="Roughly 155 characters" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<body>
-    <div id=content>
-    <div id = box>
-        <div id = header> <p><br>hello.  <br> whats on your mind today?</p> </div>
-        <div id = textarea></div>
-        <input id = submit type="EntryText" name="answer" placeholder= "type here..." autofocus="autofocus" onfocus="this.select()">
-        <div id = settings >
-            <img src = https://cdn4.iconfinder.com/data/icons/forgen-phone-settings/48/setting-512.png>
+<body id="content" class="center dark">
+        <div id="content-format">
+            <div id="box">
+                <div id="header">
+                    <p>
+                        <br />hello. <br />
+                        whats on your mind today?
+                    </p>
+                </div>
+                <div id="textarea"></div>
+                <input id="submit" type="EntryText" name="answer" placeholder="type here..." autofocus="autofocus"
+                    onfocus="this.select()" />
+            </div>
+            <div id="settings">
+                <img id="settings-button" src='/assets/settings.png'>
+                <div id="settings-links">
+                    <img id="toggle-dark" src="./assets/sun.png"/>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        <div id="footer">
+            <span>© Giselle D.</span>
+            <span>Icons by <a target="_blank" href="https://icons8.com"> Icons8</a></span>
+        </div>
 </body>
-<script src = 'https://code.jquery.com/jquery-3.4.1.min.js'></script>
-<script src = 'script.js'></script>
+
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="script.js"></script>
+
 </html>

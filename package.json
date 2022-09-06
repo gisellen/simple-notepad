@@ -1,0 +1,22 @@
+{
+  "name": "simple-notepad",
+  "version": "1.0.0",
+  "description": "A simple notepad whenever you're mentally overwhelmed.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gisellen/simple-notepad.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gisellen/simple-notepad/issues"
+  },
+  "homepage": "https://github.com/gisellen/simple-notepad#readme",
+  "devDependencies": {
+    "jest-environment-jsdom": "^29.0.2"
+  }
+}

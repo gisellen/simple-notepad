@@ -1,105 +1,183 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway:200|Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway:200|Roboto&display=swap");
+#content {
+  height: 100vh;
+}
 
-#content{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* dark mode */
+.dark{
+  background-color:#222222 !important;
+}
+
+.dark #content-format #box{
+  border: 1px solid rgb(32, 32, 32);
+  background: #303030;
+}
+
+
+.dark #content-format #box #header{
+  background: rgb(26, 26, 26) !important;
+}
+
+.dark #content-format #box #header p{
+  color:rgb(218, 218, 218)
+}
+
+.dark #content-format #box #textarea p{
+  color: rgb(218, 218, 218);
+}
+
+.dark #submit{
+  color: rgb(218, 218, 218);
+}
+
+
+/* light mode */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* actual content */
-#box{
-    border: 1px solid darkgrey;
-    border-radius: 15px;
-    width: 200px;
-    height: 350px;
-    text-align: center;
-    position: relative;
-    animation: MoveLoad 2s;
+#content-format{
+    display: flex;
+    flex-direction: row;
+    animation: MoveLoad 3s;
+}
+#box {
+  border: 1px solid darkgrey;
+  border-radius: 15px;
+  width: 200px;
+  height: 350px;
+  text-align: center;
+  position: relative;
 }
 
-#box p{
-    font-family: 'josefin-sans', sans-serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-    margin-top: 0;
-    color: #666666;
+#box p {
+  font-family: "josefin-sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 0;
+  color: #666666;
 }
 
-#header{
-    background: #e6e6e6;
-    padding: 8px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    animation: MoveLoad 5s;
+#header {
+  background: #e6e6e6;
+  padding: 8px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-#textarea{
-    overflow: auto;
-    overflow-x: hidden;
-    text-align: left;
-    padding-top: 10px;
-    height: 230px;
-    width: 180px;
-    position: relative;
-    margin: 0 auto;
-    font-family: 'roboto', sans-serif;
-    font-size: 10px;
-    word-wrap: break-word;
-    display: block;
+#textarea {
+  overflow: auto;
+  overflow-x: hidden;
+  text-align: left;
+  padding-top: 10px;
+  height: 230px;
+  width: 180px;
+  position: relative;
+  margin: 0 auto;
+  font-family: "roboto", sans-serif;
+  font-size: 10px;
+  word-wrap: break-word;
+  display: block;
 }
 
-::-webkit-scrollbar{
-    width: 1px;
+::-webkit-scrollbar {
+  width: 1px;
 }
 
-::-webkit-scrollbar-thumb{
-    background: #4d4d4d;
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
 }
 
-#submit{
-    border: none;
-    position: relative;
-    border-bottom: 1px solid #4d4d4d;
-    top: 0px;
-    width: 180px;
-    font-family: 'roboto', sans-serif;
-    font-size: 10px;
+#submit {
+  background: transparent;
+  border: none;
+  position: relative;
+  border-bottom: 1px solid #4d4d4d;
+  border-radius: 2px;
+  top: 0px;
+  width: 180px;
+  height: 20px;
+  font-family: "roboto", sans-serif;
+  font-size: 10px;
 }
+
 
 /* settings */
 #settings {
-    padding: 5px;
-    position: relative;
-    right: -115px;
-    top: -340px;
+  padding: 5px;
+  transition: 1s ;
 }
 
-#settings img{
-    width: 20px;
-    height: 20px;
-    opacity: 50%;
+#settings img {
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+  opacity: 50%;
 }
 
-#settings img:hover{
-    cursor: pointer;
+#settings img:hover {
+  cursor: pointer;
+  animation: ease-in-out spin 0.5s
 }
 
+#settings-links{
+  font-family: "roboto", sans-serif;
+  padding-left: 10px;
+}
+
+
+#settings-links img {
+  width: 30px;
+  height: 30px;
+  opacity: 50%;
+}
+
+/* footer */
+#footer{
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  font-family: "josefin-sans", sans-serif;
+  color: #666666;
+}
+
+#footer a{
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "josefin-sans", sans-serif;
+  color: #666666;
+}
 /* misc features */
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 /* animation */
 
-@keyframes MoveLoad{
-    from {
-        top: -100px; 
-        opacity: 0%;
-    }
-    to {
-        top:0px; 
-        opacity: 100%;
-    }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes MoveLoad {
+  from {
+    top: -100px;
+    opacity: 0%;
+  }
+  to {
+    top: 0px;
+    opacity: 100%;
+  }
 }
